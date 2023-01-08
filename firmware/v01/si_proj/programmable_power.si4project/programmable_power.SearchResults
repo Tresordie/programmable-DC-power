@@ -1,0 +1,37 @@
+---- HAL_Init Matches (6 in 4 files) ----
+stm32f1xx_hal.c (F:\Github\programmable-DC-power\firmware\v01\libraries\STM32F1xx_HAL_Driver\Src) line 111 : 
+        (++) Time base configuration function (HAL_InitTick ()) is called automatically
+             at the beginning of the program after reset by HAL_Init() or at any time
+             when clock is configured, by HAL_RCC_ClockConfig().
+        (++) Source of time base is configured  to generate interrupts at regular
+             time intervals. Care must be taken if HAL_Delay() is called from a
+stm32f1xx_hal.c (F:\Github\programmable-DC-power\firmware\v01\libraries\STM32F1xx_HAL_Driver\Src) line 141 : 
+  */
+HAL_StatusTypeDef HAL_Init(void)
+{
+  /* Configure Flash prefetch */
+#if (PREFETCH_ENABLE != 0)
+stm32f1xx_hal.c (F:\Github\programmable-DC-power\firmware\v01\libraries\STM32F1xx_HAL_Driver\Src) line 222 : 
+  * @note This function is called  automatically at the beginning of program after
+  *       reset by HAL_Init() or at any time when clock is reconfigured  by HAL_RCC_ClockConfig().
+  * @note In the default implementation, SysTick timer is the source of time base.
+  *       It is used to generate interrupts at regular time intervals.
+  *       Care must be taken if HAL_Delay() is called from a peripheral ISR process,
+stm32f1xx_hal.h (F:\Github\programmable-DC-power\firmware\v01\libraries\STM32F1xx_HAL_Driver\Inc) line 281 : 
+/* Initialization and de-initialization functions  ******************************/
+HAL_StatusTypeDef HAL_Init(void);
+HAL_StatusTypeDef HAL_DeInit(void);
+void HAL_MspInit(void);
+void HAL_MspDeInit(void);
+stm32f1xx_hal_timebase_rtc_alarm_template.c (F:\Github\programmable-DC-power\firmware\v01\libraries\STM32F1xx_HAL_Driver\Src) line 81 : 
+  * @note   This function is called  automatically at the beginning of program after
+  *         reset by HAL_Init() or at any time when clock is configured, by HAL_RCC_ClockConfig().
+  * @param  TickPriority Tick interrupt priority.
+  * @retval HAL status
+  */
+stm32f1xx_hal_timebase_tim_template.c (F:\Github\programmable-DC-power\firmware\v01\libraries\STM32F1xx_HAL_Driver\Src) line 50 : 
+  * @note   This function is called  automatically at the beginning of program after
+  *         reset by HAL_Init() or at any time when clock is configured, by HAL_RCC_ClockConfig().
+  * @param  TickPriority Tick interrupt priority.
+  * @retval HAL status
+  */
